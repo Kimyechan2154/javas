@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Phoenix editor</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+     <!--<div>
+    <h1 id="hello">HiHi</h1>
+        <h1 id="hi"> JS nomal</h1>
+    <script>
+    document.getElementById('hello').style.fontSize ='16px';
+    document.getElementById('hello').style.color ='red';
+    document.getElementById('hi').innerHTML ='JS gosu';
+    //문서    의 html가져와라    id가 hello  안의 html 바꾸다
+    </script>
+    </div> -->    
+        
+    <div class="alert-box" id="ale">
+        <p class="p-style"></p>
+        <button onclick="알림창열기('none')">닫기</button></div>
+        <button onclick="알림창열기('block'); showText('아이디 입력')">버튼1</button>
+        <button onclick="알림창열기('block'); showText('비번입력')">버튼2</button>
+        
+        
+        
+        
+        <script>
+  function 알림창열기(구멍){
+    document.getElementById('ale').style.display = 구멍;
+  }
+            
+        function showText(변경) {
+            document.querySelector(".p-style").innerHTML = 변경;
+            
+        }
+        </script>
+    </body>
+</html>
+
+.alert-box {
+    background-color: skyblue;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+} 
+
+
+
+.p-style {
+    margin: 0;
+    padding: 0;
+}
