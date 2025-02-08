@@ -20,7 +20,7 @@
         
     <div class="alert-box" id="ale">
         <p class="p-style"></p>
-        <button onclick="알림창열기('none')">닫기</button></div>
+        <button id="close">닫기</button></div>
         <button onclick="알림창열기('block'); showText('아이디 입력')">버튼1</button>
         <button onclick="알림창열기('block'); showText('비번입력')">버튼2</button>
         
@@ -28,18 +28,25 @@
         
         
         <script>
+            document.getElementById('close').addEventListener('click', function() {
+                document.getElementById('ale').style.display = 'none';
+            });
+            
+            
   function 알림창열기(구멍){
     document.getElementById('ale').style.display = 구멍;
   }
             
         function showText(변경) {
-            document.querySelector(".p-style").innerHTML = 변경;
+            document.getElementsByClassName('p-style')[0].innerHTML = 변경;
             
         }
         </script>
     </body>
 </html>
 
+
+ 
 .alert-box {
     background-color: skyblue;
     padding: 20px;
