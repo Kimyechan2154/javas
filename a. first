@@ -9,6 +9,48 @@
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div class="black-bg">
+  <div class="white-bg">
+    <h4>로그인하세요</h4>
+      <form action="suc.html">
+      <div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">아이디</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="아이디를 입력하세요.">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">비밀번호</label>
+  <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="비밀번호를 입력하세요.">
+</div>
+      <button type="submit" class="btn btn-primary" id="btn-sub">전송</button>
+        <button type="button" class="btn btn-danger" id="bt-close">닫기</button>
+      </form></div>
+</div>
+        <script>
+            $('#btn-sub').on('click', function(){
+            if(조건){
+            }
+            })
+        </script>
+        
+        <button id="id-btn">로그인</button>
+        
+        <script>
+        
+            $('#id-btn').on('click', function(){
+                $('.black-bg').toggleClass('show-model');
+            })
+            $('#bt-close').on('click', function(){
+                $('.black-bg').toggleClass('show-model');
+            })
+        </script>
+        
+        
+        <div class="main-bg">
+        <h4>Shrits on Sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+        </div>
+        
+        
      <!--<div>
     <h1 id="hello">HiHi</h1>
         <h1 id="hi"> JS nomal</h1>
@@ -23,7 +65,8 @@
   <div class="container-fluid">
     <span class="navbar-brand">Navbar</span>
     <button class="navbar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
+      
+        <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav> 
@@ -39,6 +82,8 @@
         <p class="hello">안녕</p>
         <p class="hello">안녕</p>
         <button id="test-btn">버튼</button>
+        
+        
         <script>
             document.querySelector('.hello').innerHTML = '히히';
             $('.hello').html('구구');
@@ -50,8 +95,8 @@
                 $('.hello').fadeOut();
             })
             
+            
         </script>
-        
         
         
         
@@ -87,6 +132,8 @@
     </body>
 </html>
 
+
+
 .alert-box {
     background-color: skyblue;
     padding: 20px;
@@ -108,5 +155,29 @@
 .show {
     display: block !important;
 }
+.black-bg {
+  width : 100%;
+  height : 0;
+  position : fixed;
+  background : rgba(0,0,0,0.5);
+  z-index : 5;
+  padding: 30px;
+    visibility: hidden;
+    transition: all 1s;
+}
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+    
+} 
 
+.show-model {
+    visibility: visible;
+    height: 100%;
+}
 
+.main-bg {
+    padding: 100px 20px;
+    background: lightgrey;
+}
