@@ -26,10 +26,19 @@
       </form></div>
 </div>
         <script>
-            $('#btn-sub').on('click', function(){
-            if(조건){
+            
+            if(1 == 3){
+                console.log('맞아요');
+            } else if(3==3){
+                 console.log('맞아요2');
             }
-            })
+            
+            $('form').on('submit', function(e){
+                if (document.getElementById('formGroupExampleInput').value == ''){
+                    alert('공백띠');
+                    e.preventDefault();
+                }
+            });
         </script>
         
         <button id="id-btn">로그인</button>
@@ -61,6 +70,7 @@
     //문서    의 html가져와라    id가 hello  안의 html 바꾸다
     </script>
     </div> -->    
+        
         <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <span class="navbar-brand">Navbar</span>
@@ -131,6 +141,7 @@
     
     </body>
 </html>
+
 
 
 
