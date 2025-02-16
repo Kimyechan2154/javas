@@ -27,8 +27,37 @@
 </div>
         <span class="badge bg-dark ms-auto">Dark 🔄</span>
         
+        
+        <p>태조 이성계가 태어난 년도는?</p>
+<input type="text" id="answer">
+<button id="send-answer">제출</button>
+3
         <script>
-            var 이름;
+            $('form').on('submit', function(e){
+                if (document.getElementById('formGroupExampleInput').value == ''){
+                    alert('아이디 공백띠');
+                    e.preventDefault();
+                 }
+                
+                
+            var age = 23;
+            const birthplace = '구리';
+            
+            var 예금액 = 60000;
+            var 미래예금액 = 0;
+            
+            if(예금액<50000){
+                미래예금액 = (예금액 * 1.15)*1.15;
+            }
+            else{
+                미래예금액 = (예금액 * 1.2)*1.2;
+            }
+            console.log(미래예금액)
+            
+            var first = 360;
+            var total;
+            
+            total = first+first/3*2+(first/3*2)/3*2; 
             
             var count = 0;
             $('.badge').on('click', function(){
@@ -183,11 +212,6 @@
     
     </body>
 </html>
-
-
-
-
-
 .alert-box {
     background-color: skyblue;
     padding: 20px;
