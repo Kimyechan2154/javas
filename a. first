@@ -25,13 +25,51 @@
         <button type="button" class="btn btn-danger" id="bt-close">닫기</button>
       </form></div>
 </div>
-        <span class="badge bg-dark ms-auto">Dark 🔄</span>
+        <div class="alert alert-danger">
+        <span id="timer">5</span>초뒤에 사라진다 ㅋㅋ
+        </div>
         
+        <script>
+            
+        setTimeout(function(){$('#timer').html('4'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
+                }, 1000)
+            setTimeout(function(){$('#timer').html('3'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
+                }, 2000)
+            setTimeout(function(){$('#timer').html('2'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
+                }, 3000)
+            setTimeout(function(){$('#timer').html('1'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
+                }, 4000)
+            setTimeout(function(){$('.alert').hide(); //1회 실행, setInterval 정해진 시간 마다 계속 실행
+                }, 5000)
+        </script>
+        
+        
+        <span class="badge bg-dark ms-auto">Dark 🔄</span>
         
         <p>태조 이성계가 태어난 년도는?</p>
 <input type="text" id="answer">
 <button id="send-answer">제출</button>
-3
+
+        <script>
+        //제출 버튼을 눌렀을때 빈칸안에 있는 숫자가 1335일시 alert('성공');
+        var wrong = 0;
+            $('#send-answer').on('click', function(){
+            let inputValue = $('#answer').val().trim(); // 입력값 가져오기 (공백 제거)
+            if (inputValue === "1335"){
+                alert('정답입니다.');
+            }
+            else {
+                wrong++;
+                if(wrong%3 == 0){
+                    alert('바보 ㅋ');
+                }
+            }
+            
+        })
+        </script>
+        
+        
+        
         <script>
             $('form').on('submit', function(e){
                 if (document.getElementById('formGroupExampleInput').value == ''){
@@ -50,7 +88,7 @@
                 미래예금액 = (예금액 * 1.15)*1.15;
             }
             else{
-                미래예금액 = (예금액 * 1.2)*1.2;
+                미래예금액 = (예금액 ** 1.2);
             }
             console.log(미래예금액)
             
@@ -212,6 +250,7 @@
     
     </body>
 </html>
+
 .alert-box {
     background-color: skyblue;
     padding: 20px;
