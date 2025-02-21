@@ -30,17 +30,17 @@
         </div>
         
         <script>
+            var count = 5;
             
-        setTimeout(function(){$('#timer').html('4'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
-                }, 1000)
-            setTimeout(function(){$('#timer').html('3'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
-                }, 2000)
-            setTimeout(function(){$('#timer').html('2'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
-                }, 3000)
-            setTimeout(function(){$('#timer').html('1'); //1회 실행, setInterval 정해진 시간 마다 계속 실행
-                }, 4000)
-            setTimeout(function(){$('.alert').hide(); //1회 실행, setInterval 정해진 시간 마다 계속 실행
-                }, 5000)
+        var timer = setInterval(function() {
+                    if(count > 0){
+                count--;
+                $('#timer').html(count); //1회 실행, setInterval 정해진 시간 마다 계속 실행
+                } else {
+            clearInterval(timer); // 타이머 정지
+            $('#alert-box').fadeOut(); 
+            }
+                                }, 1000);
         </script>
         
         
@@ -250,7 +250,6 @@
     
     </body>
 </html>
-
 .alert-box {
     background-color: skyblue;
     padding: 20px;
@@ -258,9 +257,6 @@
     border-radius: 5px;
     display: none;
 } 
-
-
-
 .p-style {
     margin: 0;
     padding: 0;
